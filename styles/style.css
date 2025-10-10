@@ -97,6 +97,10 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
+.overlay p {
+    color: var(--text-color); /* lub inny kolor, np. biały */
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
