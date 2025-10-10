@@ -98,7 +98,7 @@ h1 {
 }
 
 .overlay p {
-    color: var(--text-color); /* lub inny kolor, np. biały */
+    color: var(--text-color);
 }
 
 .project-card:hover {
