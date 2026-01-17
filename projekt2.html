@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Two – Adam Tobjasz</title>
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="fade-in">
+    <a href="index.html" class="back">← Back to homepage</a>
+    <h1>Moonberry Farm</h1>
+    <p class="subtitle">Clicker farming game made in unity</p>
+</header>
+
+<main>
+
+    <section class="reveal">
+        <h2>Project Overview</h2>
+        <p>
+            <strong>MoonBerry Farm</strong> is a cozy simulator where you play as a "god" who is in charge of the farm. You can create and develop your own farm, grow things and later sell them in the town.
+        </p>
+    </section>
+
+    <section class="reveal">
+        <h2>My Responsibilities</h2>
+        <ul>
+            <li>Gameplay mechanics prototyping</li>
+            <li>Player controller implementation</li>
+            <li>Player and shops inventory system</li>
+            <li>Grid based building system</li>
+            <li>Responsive UI implementation</li>
+            <li>Plants growing and harvesting</li>
+        </ul>
+    </section>
+
+    <section class="reveal">
+        <h2>Tools & Technologies</h2>
+        <p>Unity, C#, GitHub</p>
+    </section>
+
+    <section class="project-images reveal">
+        <img src="images/moonberry_farm.png" alt="Gameplay screenshot">
+        <img src="images/Pumpkin.png" alt="Gameplay screenshot">
+    </section>
+
+</main>
+
+<footer class="fade-in-delay">
+    <p><a href="mailto:adamtobjasz03@gmail.com">adamtobjasz03@gmail.com</a></p>
+</footer>
+
+<script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

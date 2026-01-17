@@ -1,54 +1,56 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phish – Adam Tobjasz</title>
     <link rel="stylesheet" href="styles/style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    
 </head>
+
 <body>
-<header style="text-align:center; padding-top:2rem;">
-    <a href="index.html" class="back">← Wróć na stronę główną</a>
+
+<header class="fade-in">
+    <a href="index.html" class="back">← Back to homepage</a>
     <h1>Phish</h1>
-    <p class="subtitle">Dynamiczny FPS w Unity</p>
+    <p class="subtitle">Fast-paced FPS made in Unity</p>
 </header>
 
 <main>
-    <section>
-        <h2>Opis projektu</h2>
+
+    <section class="reveal">
+        <h2>Project Overview</h2>
         <p>
-            <strong>Phish</strong> to dynamiczna gra FPS stworzona w Unity, w której gracz mierzy się z przeciwnikami w intensywnym, szybkim środowisku.
-            Projekt skupia się na płynnym sterowaniu, responsywnej walce i dopracowanej mechanice strzelania oraz interakcji z otoczeniem.
+            <strong>Phish</strong> is a dynamic FPS game developed in Unity, focused on fast-paced combat
+            and responsive player control. The project emphasizes smooth movement, satisfying shooting
+            mechanics, and interactive gameplay systems.
         </p>
     </section>
 
-    <section>
-        <h2>Moje zadania</h2>
+    <section class="reveal">
+        <h2>My Responsibilities</h2>
         <ul>
-            <li>Implementacja systemu poruszania się postaci</li>
-            <li>Mechanika strzelania i rzucania granatów</li>
-            <li>AI przeciwników</li>
-            <li>System pick-upów i checkpointów</li>
-            <li>System ekwipunku i interakcji</li>
-            <li>Ogólna integracja gameplayu</li>
+            <li>Player movement system implementation</li>
+            <li>Shooting mechanics and grenade system</li>
+            <li>Enemy AI behavior</li>
+            <li>Pick-up and checkpoint systems</li>
+            <li>Inventory and interaction systems</li>
+            <li>Overall gameplay integration</li>
         </ul>
     </section>
 
-    <section>
-        <h2>Narzędzia</h2>
+    <section class="reveal">
+        <h2>Tools & Technologies</h2>
         <p>Unity, C#, GitHub</p>
     </section>
 
-    <section class="project-images">
-        <img src="images/phish1.png" alt="Zrzut ekranu z gry Phish">
-        <img src="images/phish2.png" alt="Animacja z rozgrywki Phish">
+    <section class="project-images reveal">
+        <img src="images/phish1.png" alt="Phish gameplay screenshot">
+        <img src="images/phish2.png" alt="Phish gameplay screenshot">
     </section>
 
-    <section>
-        <h2>Linki</h2>
+    <section class="reveal">
+        <h2>Links</h2>
         <div class="links">
             <a href="https://mikolajkozlowski.itch.io/phish-kingslayer-of-the-deep" target="_blank">
                 <i class="fa-brands fa-itch-io"></i> Itch.io
@@ -58,10 +60,29 @@
             </a>
         </div>
     </section>
+
 </main>
 
-<footer>
-    
+<footer class="fade-in-delay">
+    <p><a href="mailto:adamtobjasz03@gmail.com">adamtobjasz03@gmail.com</a></p>
 </footer>
+
+<script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    reveals.forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
