@@ -60,14 +60,30 @@ p {
     opacity: 0.9;
 }
 
-ul {
-    margin-left: 1.5rem;
+/* ===== LISTA Z FILMAMI ===== */
+
+.video-list {
+    list-style: none;
+    padding: 0;
+}
+
+.video-list li {
+    margin-bottom: 2.5rem;
     font-size: 1.15rem;
 }
 
-ul li {
-    margin-bottom: 0.4rem;
+.video-list video {
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
+/* =========================== */
 
 .back {
     display: inline-block;
@@ -75,11 +91,6 @@ ul li {
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 600;
-    transition: opacity 0.2s ease;
-}
-
-.back:hover {
-    opacity: 0.75;
 }
 
 .project-images {
@@ -90,12 +101,11 @@ ul li {
 
 .project-images img {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
-
 
 @media (max-width: 700px) {
     .project-images {
@@ -119,16 +129,6 @@ ul li {
     border-radius: 10px;
     text-decoration: none;
     font-weight: 500;
-    transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.links a:hover {
-    transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.links i {
-    font-size: 1.2rem;
 }
 
 footer {
@@ -136,11 +136,6 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
     opacity: 0.7;
-}
-
-footer a {
-    color: var(--accent-color);
-    text-decoration: none;
 }
 
 .fade-in {
@@ -174,4 +169,3 @@ footer a {
     opacity: 1;
     transform: translateY(0);
 }
- 

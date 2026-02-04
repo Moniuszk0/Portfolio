@@ -29,13 +29,48 @@
 
     <section class="reveal">
         <h2>My Responsibilities</h2>
-        <ul>
-            <li>Player movement system implementation</li>
-            <li>Shooting mechanics and grenade system</li>
-            <li>Enemy AI behavior</li>
-            <li>Pick-up and checkpoint systems</li>
-            <li>Inventory and interaction systems</li>
-            <li>Overall gameplay integration</li>
+
+        <ul class="video-list">
+
+            <li>
+                Player movement system implementation
+                <video autoplay loop muted playsinline>
+                    <source src="videos/movement.mp4" type="video/mp4">
+                </video>
+            </li>
+
+            <li>
+                Shooting mechanics and grenade system
+                <video autoplay loop muted playsinline>
+                    <source src="videos/grenade.mp4" type="video/mp4">
+                </video>
+            </li>
+
+            <li>
+                Enemy AI behavior
+                <video autoplay loop muted playsinline>
+                    <source src="videos/enemy.mp4" type="video/mp4">
+                </video>
+            </li>
+
+            <li>
+                Pick-up and checkpoint systems
+                <video autoplay loop muted playsinline>
+                    <source src="videos/pickup.mp4" type="video/mp4">
+                </video>
+            </li>
+
+            <li>
+                Inventory and interaction systems
+                <video autoplay loop muted playsinline>
+                    <source src="videos/inventory.mp4" type="video/mp4">
+                </video>
+            </li>
+
+            <li>
+                Overall gameplay integration
+            </li>
+
         </ul>
     </section>
 
@@ -55,7 +90,7 @@
             <a href="https://mikolajkozlowski.itch.io/phish-kingslayer-of-the-deep" target="_blank">
                 <i class="fa-brands fa-itch-io"></i> Itch.io
             </a>
-            <a href="https://github.com/vodkawithcola1/PhisDev" target="_blank">
+            <a href="https://github.com/Moniuszk0/Phish" target="_blank">
                 <i class="fa-brands fa-github"></i> GitHub
             </a>
         </div>
@@ -77,9 +112,7 @@
                 observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.15
-    });
+    }, { threshold: 0.15 });
 
     reveals.forEach(el => observer.observe(el));
 </script>
